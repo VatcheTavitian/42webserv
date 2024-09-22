@@ -1,0 +1,98 @@
+.banner {
+    position: relative;
+    background-image: url('/images/serverimage.jpeg'); /* Replace with your image link */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 500px; /* Adjust the height as needed */
+    color: white;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Adjust the opacity for the fade effect */
+    z-index: 1;
+}
+
+.banner-content {
+    position: relative;
+    z-index: 2;
+}
+
+
+.form-container {
+    position: relative;
+    background-image: url('/images/formbg.jpg'); /* Replace with your image link */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 20px;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+    border-radius: 10px;
+}
+
+.form-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust the opacity for the fade effect */
+    z-index: 1;
+    border-radius: 10px;
+}
+
+.form-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 500px;
+}
+
+.form-content h2 {
+    margin-bottom: 20px;
+}
+
+.form-content input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.form-content input[type="submit"] {
+    background-color: #dc3545;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 0;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.form-content input[type="submit"]:hover {
+    background-color: #c82333;
+}

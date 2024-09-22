@@ -1,0 +1,13 @@
+Uploading of files must be done with base64 encoding.
+There must be a valid upload directory present.
+This is because we found when uploading large files and simply extracting the content within the HTTP request 'boundary' was not
+sufficient to ensure the integrity of the data.
+As such, as per JS uploader.js file, the file content is encoded and base64 before sending the request to the webserver.
+The server then receives and decodes the content in the handleUpload() function.
+Please see upload.html and uploader.js files.
+
+During testing we found that uploading large files can stall the server, and behave in a 'blocking' affect.
+This is because the server utilises base64 decoding function which can consume resources.
+As such, if the payload size is found to be greater than 10000 bytes, a separate thread is launched to minimise 
+the stalling affect large files have during upload.
+Consult handleUpload() and handleUploadWithThread() functions in Request.cpp
