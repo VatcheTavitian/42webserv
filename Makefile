@@ -1,7 +1,8 @@
-# Name of the executable
 NAME     = webserv
 GCC      = c++
-CPPFLAGS   = -Wall -Wextra -Werror -std=c++98 -lpthread -g #-fsanitize=address -fsanitize=undefined
+# For linux uncomment below
+#LINUX = -lpthread
+CPPFLAGS   = -Wall -Wextra -Werror -std=c++98 -g $(LINUX) 
 RM       = rm -rf
 LIBS     = -I./includes/ 
 

@@ -21,7 +21,10 @@ This server is not secure and not recommended for use in production.
 	```sh
 	cd 42webserv
 	```
-3. Run make:
+
+3. !! If you are using Linux, open Makefile and uncomment line LINUX = -lpthread
+
+4. Run make:
 	```sh
 	make
 	```
